@@ -35,6 +35,10 @@ spring:
   mvc:
     path match:
       matching-strategy: ant_path_matcher
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/pages/
+    suffix: .html
 # Mybatis配置
 mybatis:
   # 配置XML映射文件中指定的实体类别名路径
@@ -42,3 +46,10 @@ mybatis:
   # 配置MyBatis的xml配置文件路径
   mapper-locations: classpath:mapper/*.xml
 
+# ===== 自定义swagger配置 ===== #
+swagger:
+  enable: true
+  application-name: ${spring.application.name}
+  application-version: 1.0
+  application-description: springfox swagger 3.0整合Demo
+  try-host: http://localhost:${server.port}
