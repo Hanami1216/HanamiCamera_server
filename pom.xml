@@ -23,6 +23,17 @@
         <module>hanamiCamera_middleware</module>
     </modules>
 
+    <dependencyManagement>
+        <dependencies>
+            <!--swagger-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>3.0.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <properties>
         <java.version>17</java.version>
     </properties>
